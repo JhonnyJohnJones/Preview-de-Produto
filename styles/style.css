@@ -6,8 +6,8 @@
     --tamanho-caixa-w: clamp(300px, 100%, 600px);
     --tamanho-caixa-h: clamp(225px, 100%, 450px);
     --verde-padrao: #3D8168; 
-    --fonte-menor: clamp(10px, 100%, 14px);
-    --fonte-maior: clamp(18px, 2em, 24px);
+    --fonte-menor: clamp(8px, 100%, 14px);
+    --fonte-maior: clamp(14px, 2em, 24px);
 }
 
 
@@ -23,7 +23,6 @@ body {
     grid-template-rows: 5% auto 5%;
     grid-template-columns: auto auto auto;
     font-size: var(--fonte-menor);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .tudo {
@@ -66,12 +65,12 @@ img {
 }
 
 .texto-produto {
-    height: 100%;
+    height: var(--tamanho-caixa-h);
     width: fit-content;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: clamp(1em, 2em, 2em);
+    gap: clamp(0.5em, 100%, 2em);
     padding: 10px;
 }
 
@@ -148,18 +147,29 @@ button.add::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: justify;
 }
 
 
 
 @media only screen and (max-width: 300px) {
+    :root {
+        --tamanho-caixa-w: 100%;
+        --tamanho-caixa-h: 100%;
+    }
+    
     body {
         display: block;
+    }
+
+    .tudo {
+        height: auto;
     }
 
     main {
         grid-template-columns: auto;
         grid-template-rows: 50% 50%;
+        height: auto;
     }
 
     img {
@@ -167,7 +177,7 @@ button.add::before {
     }
 
     .texto-produto {
-        gap: clamp(0.5em, 1em, 1em);
+        gap: clamp(0em, 1em, 1em);
     }
 
 }
