@@ -70,8 +70,12 @@ img {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: clamp(0.5em, 100%, 2em);
+    gap: clamp(1em, 7.5%, 3em);
     padding: 10px;
+}
+
+@media only screen and (max-width: 450) {
+    
 }
 
 p {
@@ -147,7 +151,7 @@ button.add::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: justify;
+    text-align: center;
 }
 
 
@@ -168,8 +172,12 @@ button.add::before {
 
     main {
         grid-template-columns: auto;
-        grid-template-rows: 50% 50%;
-        height: auto;
+        grid-template-rows: fit-content;
+        height: clamp(500px, 100%, 1000px);
+    }
+
+    .imagem-produto {
+        height: fit-content;
     }
 
     img {
@@ -178,6 +186,11 @@ button.add::before {
 
     .texto-produto {
         gap: clamp(0em, 1em, 1em);
+    }
+
+    .attribution {
+        display: block;
+        margin-top: 2em;
     }
 
 }
