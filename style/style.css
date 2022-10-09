@@ -126,7 +126,8 @@ p {
 }
 
 button.add {
-    border-radius: 20px;
+    border-radius: 10px;
+    font-weight: bold;
     padding: max(3px, 10px);
     border: 2px solid transparent;
     color: white;
@@ -142,6 +143,10 @@ button.add:active {
     color: var(--verde-padrao);
     background-color: white;
     border: 2px solid var(--verde-padrao);
+}
+
+button.add::before {
+    content: '🛒';
 }
 
 
