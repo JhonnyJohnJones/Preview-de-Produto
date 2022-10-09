@@ -1,0 +1,157 @@
+
+@import url('https://fonts.googleapis.com/css2? family= Fraunces:opsz,wght@9..144,700 &família= Montserrat:wght@500;700 & display=swap');
+
+
+:root{
+    --tamanho-caixa-w: clamp(300px, 100%, 600px);
+    --tamanho-caixa-h: clamp(225px, 100%, 450px);
+    --verde-padrao: #3D8168; 
+    --fonte-menor: clamp(10px, 100%, 14px);
+    --fonte-maior: clamp(18px, 2em, 24px);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    grid-template-rows: 5% auto 5%;
+    grid-template-columns: auto auto auto;
+    font-size: var(--fonte-menor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.tudo {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+}
+
+
+main {
+    background-color: beige;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 5px;
+    height: var(--tamanho-caixa-h);
+    width: var(--tamanho-caixa-w);
+    border-radius: 20px;
+}
+
+.imagem-produto {
+    height: inherit;
+}
+
+picture {
+    height: inherit;
+}
+
+source {
+    display: none;
+}
+
+img {
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+}
+
+img [src=] {
+    width: auto;
+    border-radius: 20px 0 0 20px;
+    height: var(--tamanho-caixa-h);
+}
+
+
+.texto-produto {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: clamp(1em, 2em, 2em);
+    padding: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+.categoria {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0, 0.5);
+    font-size: var(--fonte-menor);
+}
+
+.produto {
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    font-size: var(--fonte-maior);
+}
+
+.produto-descrito {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0, 0.75);
+}
+
+.precos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    /*gap: 50%;*/
+}
+
+.preco-atual {
+    color: var(--verde-padrao);
+    font-size: var(--fonte-maior);
+    font-weight: bold;
+}
+
+.preco-default {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+button.add {
+    border-radius: 10px;
+    font-weight: bold;
+    padding: max(3px, 10px);
+    border: 2px solid transparent;
+    color: white;
+    background-color: var(--verde-padrao);
+    transition: 0.15s;
+}
+
+button.add:hover {
+    cursor: pointer;
+}
+
+button.add:active {
+    color: var(--verde-padrao);
+    background-color: white;
+    border: 2px solid var(--verde-padrao);
+}
+
+button.add::before {
+    content: '🛒';
+}
+
+
+.attribution {
+    width: var(--tamanho-caixa-w);
+    height: 20px;
+    text-align: center;
+}
