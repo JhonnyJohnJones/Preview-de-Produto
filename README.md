@@ -29,7 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Minha solução](https://github.com/JhonnyJohnJones/Preview-de-Produto)
+- Live Server URL: [Site no Vercel](https://preview-de-produto.vercel.app/)
 
 ## My process
 
